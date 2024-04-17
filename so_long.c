@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:04:15 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/17 15:16:14 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 22:27:52 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ int	main(int argc, char **argv)
 	save = ft_check_map(argc, argv);
 	if (save == NULL)
 		return (invalid_input(), 1);
+	if (save->map[0].l_cnt > 15 || save->map[1].l_len > 27)
+		return (ft_printf("But, map is too wide/long, screen isn't that big\n"),
+			free(save->p_to_x), free(save->co), ft_free_map(save->map), 1);
 	save->ws.i = 0;
 	save->ws.img_wall = 0;
 	save->ws.img_co = 0;

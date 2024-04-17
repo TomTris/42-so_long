@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:04:15 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/17 15:17:07 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 22:28:21 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,9 @@ int	ft_check0(t_save *save)
 
 	i = 0;
 	check = 0;
+	if (save->map[0].l_cnt > 15 | save->map[1].l_len > 27)
+		return (ft_printf("But, map is too wide/long, screen isn't that big\n"),
+			free(save->p_to_x), free(save->co), ft_free_map(save->map), 1);
 	while (++i <= save->map[0].l_cnt)
 	{
 		j = -1;
