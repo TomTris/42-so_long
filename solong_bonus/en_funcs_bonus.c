@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 22:51:55 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 19:21:27 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:14:14 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ t_position	ft_create_en(t_save *save)
 			&& (save->p_to_x[k].l_cnt != save->ex.l_cnt
 				|| save->p_to_x[k].l_len != save->ex.l_len))
 			break ;
+	}
+	if (k == 1)
+	{
+		ft_printf("Are you sure that you have place for the enemy,  so that");
+		ft_printf(" the enemy at least has posibility to catch your player?\n");
+		invalid_input_bonus();
+		ft_close((void *) save);
 	}
 	en.l_cnt = save->p_to_x[k].l_cnt;
 	en.l_len = save->p_to_x[k].l_len;

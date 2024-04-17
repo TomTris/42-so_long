@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:51:18 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 18:48:25 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/16 23:04:16 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	ft_check_exit_win(t_save *save)
 		mlx_put_image_to_window(save->ws.cnect, save->ws.wnd, save->ws.img_win,
 			(save->ws.wi * (map[1].l_len - 1) - save->ws.wi2) / 2,
 			(save->ws.he * (save->map[0].l_cnt) - save->ws.he2) / 2);
-		ft_printf("Winnnnnn Winnn Winnn winnn\n You Win!!!\n Win\n");
-		ft_printf("Win\nWin\nWin\nWin\nWin\nWin\nWin\nWin\nWin\nWin\nWin\n");
-		ft_printf("Just Kidding. U should finish it faster st*p*d\n");
+		ft_printf("You Win!");
 		ft_detect(-2, save);
 	}
 	if (save->co[0].l_len == 0)

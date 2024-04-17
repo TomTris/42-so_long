@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:49:02 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 19:26:53 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 22:16:17 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_ws_create2(t_save *save)
 	ws->img_wall = mlx_xpm_file_to_image(ws->cnect,
 			"texture/tree.xpm", &ws->wi, &ws->he);
 	if (!ws->img_wall)
-		return (free(ws->cnect), free(ws->wnd), ws->i = -2, 1);
+		return (ft_close((void *)save));
 	save->ws.img_po = mlx_xpm_file_to_image(save->ws.cnect,
 			"texture/sword.xpm", &save->ws.wi, &save->ws.he);
 	if (save->ws.img_po == NULL)

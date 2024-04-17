@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:04:15 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 15:10:14 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:17:07 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,15 +118,15 @@ int	main(int argc, char **argv)
 	t_save		*save;
 
 	if (argc != 2 || argv == 0)
-		return (write(1, "check input\n", 12), 1);
+		return (invalid_input_bonus(), 1);
 	save = ft_check_map(argc, argv);
 	if (save == NULL)
-		return (1);
+		return (invalid_input_bonus(), 1);
 	if (ft_check0(save) == 1)
 	{
 		ft_printf("But no empty space, ");
-		ft_printf("need at least 1 space '0' for bonus part\n", 20);
-		return (1);
+		ft_printf("need at least 1 space '0' for bonus part\n\n", 20);
+		return (invalid_input_bonus(), 1);
 	}
 	save->ws.i = 0;
 	save->ws.img_wall = 0;

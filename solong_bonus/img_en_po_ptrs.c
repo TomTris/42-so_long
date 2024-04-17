@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 23:04:26 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 19:14:32 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:17:58 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ void	ft_img_en_ptrs2(t_save *save)
 	if (save->img_en_up == 0)
 		ft_close((void *)save);
 	save->img_en_down = mlx_xpm_file_to_image(save->ws.cnect,
-		"texture/en_down.xpm", &(save->ws.wi), &(save->ws.he));
+			"texture/en_down.xpm", &(save->ws.wi), &(save->ws.he));
 	if (save->img_en_down == 0)
 		ft_close((void *)save);
 	save->img_en_left = mlx_xpm_file_to_image(save->ws.cnect,
-		"texture/en_left.xpm", &(save->ws.wi), &(save->ws.he));
+			"texture/en_left.xpm", &(save->ws.wi), &(save->ws.he));
 	if (save->img_en_left == 0)
 		ft_close((void *)save);
 	save->img_en_right = mlx_xpm_file_to_image(save->ws.cnect,
-		"texture/en_right.xpm", &(save->ws.wi), &(save->ws.he));
+			"texture/en_right.xpm", &(save->ws.wi), &(save->ws.he));
 	if (save->img_en_right == 0)
 		ft_close((void *)save);
 	save->ws.img_en2 = mlx_xpm_file_to_image(save->ws.cnect,
-		"texture/en2.xpm", &(save->ws.wi), &(save->ws.he));
+			"texture/en2.xpm", &(save->ws.wi), &(save->ws.he));
 	if (save->ws.img_en2 == 0)
 		ft_close((void *)save);
 }

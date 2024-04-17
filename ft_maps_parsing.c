@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:14:51 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 19:17:40 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:23:45 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,14 +105,14 @@ t_save	*ft_check_map(int argc, char *argv[])
 	static t_save	save;
 
 	if (argc != 2)
-		return (ft_printf("#1 map"), NULL);
+		return (ft_printf("you need to put a map name"), NULL);
 	len = ft_strlen(argv[1]);
 	if (len <= 3 || argv[1][len - 1] != 'r' || argv[1][len -2] != 'e'
 		|| argv[1][len - 3] != 'b' || argv[1][len - 4] != '.')
 		return (ft_printf("wrong name\n"), NULL);
 	map = ft_map_create(argv);
 	if (map == NULL)
-		return (write(1, "create invalid", 14), NULL);
+		return (ft_printf("create invalid\n"), NULL);
 	save = ft_map_check(map);
 	if (save.ex.l_cnt == -1)
 		return (ft_printf("map_check invalid\n"), ft_free_map(map), NULL);

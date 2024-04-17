@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:04:15 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 18:44:46 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:16:14 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ int	main(int argc, char **argv)
 	t_save		*save;
 
 	if (argc != 2 || argv == 0)
-		return (printf("check input\n"), 1);
+		invalid_input();
 	save = ft_check_map(argc, argv);
 	if (save == NULL)
-		return (1);
+		return (invalid_input(), 1);
 	save->ws.i = 0;
 	save->ws.img_wall = 0;
 	save->ws.img_co = 0;

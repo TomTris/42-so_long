@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 08:46:48 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 18:33:47 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:16:48 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,6 @@ char		*ft_dis(int step_cnt);
 void		ft_display_for_movement(t_save *save, int *step_cnt);
 void		ft_img_en_ptrs(t_save *save);
 void		ft_img_po_ptrs(t_save *save);
-
+void		invalid_input_bonus(void);
+void		invalid_input(void);
 #endif

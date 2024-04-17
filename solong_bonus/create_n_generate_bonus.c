@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:49:02 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/16 19:20:44 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/17 15:32:01 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ int	ft_ws_create4(t_save *save)
 
 int	ft_ws_create3(t_save *save)
 {
-	t_wnd_create	*ws;
-
-	ws = &save->ws;
 	save->ws.img_ep = mlx_xpm_file_to_image(save->ws.cnect,
 			"texture/coin.xpm", &save->ws.wi, &save->ws.he);
 	if (save->ws.img_ep == NULL)
