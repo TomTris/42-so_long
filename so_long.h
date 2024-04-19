@@ -6,13 +6,12 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 08:46:48 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/17 15:16:48 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/19 18:24:01 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdio.h>

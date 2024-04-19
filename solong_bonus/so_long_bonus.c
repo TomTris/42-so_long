@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:04:15 by qdo               #+#    #+#             */
-/*   Updated: 2024/04/17 22:28:21 by qdo              ###   ########.fr       */
+/*   Updated: 2024/04/19 18:27:43 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_img_load2(void *param)
 	else
 		mlx_put_image_to_window(ws->cnect, ws->wnd, ws->img_ex2,
 			ws->wi * save->ex.l_len, ws->he * (save->ex.l_cnt - 1));
-	if (ws->i == 2000)
+	if (ws->i == 1750)
 	{
 		mlx_put_image_to_window(ws->cnect, ws->wnd, ws->img_po,
 			ws->wi * save->po.l_len, ws->he * (save->po.l_cnt - 1));
@@ -51,9 +51,9 @@ int	ft_img_load(void *param)
 	if (save->ws.i < 0)
 		return (1);
 	save->ws.i++;
-	if (ws->i == 4001)
+	if (ws->i == 3501)
 		ws->i = 0;
-	if (ws->i == 2000 || ws->i == 4000)
+	if (ws->i == 1750 || ws->i == 3500)
 	{
 		save = (t_save *)param;
 		ws = &save->ws;
